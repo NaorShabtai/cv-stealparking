@@ -24,6 +24,7 @@ end
 
 RegisterNetEvent("cv-stealparking:client:steal", function()
     local hasItem = QBCore.Functions.HasItem('lockpick')
+    local random = math.random(Config.MinMoney, Config.MaxMoney)
     
     if rob then
         QBCore.Functions.Notify("Hold up buddy", "error")
@@ -35,7 +36,7 @@ RegisterNetEvent("cv-stealparking:client:steal", function()
         TaskPlayAnim(PlayerPedId(), "veh@break_in@0h@p_m_one@", "low_force_entry_ds", 3.0, 3.0, -1, 16, 0, 0, 0, 0)
         exports['ps-ui']:Circle(function(success)
             if success then
-                TriggerServerEvent("cv-stealparking:server:getmoney", Config.Money)
+                TriggerServerEvent("cv-stealparking:server:getmoney", random)
                 rob = true
             else
                 QBCore.Functions.Notify("You failed", "error")
