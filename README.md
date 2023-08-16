@@ -1,7 +1,7 @@
 # cv-stealparking
 A script to steal some money in the parking meter
 
-# In game #
+# In Game #
 
 ![giphy](https://github.com/CoreVersion/cv-stealparking/assets/111662813/55f57ac3-d847-415f-a434-9e0539818969)
 
