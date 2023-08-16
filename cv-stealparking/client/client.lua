@@ -27,7 +27,7 @@ RegisterNetEvent("cv-stealparking:client:steal", function()
     
     if rob then
         QBCore.Functions.Notify("Hold up buddy", "error")
-        Citizen.Wait(5000)
+        Citizen.Wait(Config.cooldown)
         rob = false
     else
     if hasItem then
