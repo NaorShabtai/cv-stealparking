@@ -13,3 +13,6 @@ qb-core - https://github.com/qbcore-framework/qb-core
 ps-ui - https://github.com/Project-Sloth/ps-ui
 
 qb-target - https://github.com/qbcore-framework/qb-target
+
+# Discord: # 
+https://discord.gg/VmPWhNWv8k
