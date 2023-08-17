@@ -22,6 +22,11 @@ end
 
 ---- Events ----
 
+RegisterNetEvent("cv-stealparking:client:dispatch", function()
+    exports['ps-dispatch']:StealParking()
+end)
+
+
 RegisterNetEvent("cv-stealparking:client:steal", function()
     local hasItem = QBCore.Functions.HasItem('lockpick')
     local random = math.random(Config.MinMoney, Config.MaxMoney)
@@ -38,6 +43,9 @@ RegisterNetEvent("cv-stealparking:client:steal", function()
             if success then
                 TriggerServerEvent("cv-stealparking:server:getmoney", random)
                 rob = true
+                if Config.dispatch then
+                    TriggerEvent("cv-stealparking:client:dispatch")
+                end
             else
                 QBCore.Functions.Notify("You failed", "error")
                 ClearPedTasksImmediately(PlayerPedId())
